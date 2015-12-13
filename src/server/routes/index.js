@@ -48,6 +48,9 @@ const PrivacyPage = React.createFactory(
 const LicensingPage = React.createFactory(
 	require('../../client/components/pages/licensing.jsx')
 );
+const SearchPage = React.createFactory(
+	require('../../client/components/pages/search.jsx')
+);
 
 /* GET home page. */
 router.get('/', (req, res) => {
@@ -108,6 +111,10 @@ router.get('/licensing', (req, res) => {
 });
 
 router.get('/search', (req, res) => {
+	res.render('page', {
+		title: 'Search',
+		markup: ReactDOMServer.renderToString(SearchPage())
+	});
 	const query = req.query.q;
 	const mode = req.query.mode || 'search';
 
