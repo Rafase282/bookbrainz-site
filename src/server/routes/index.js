@@ -167,6 +167,7 @@ router.get('/search', (req, res) => {
 		.then((entities) => {
 			if (mode === 'search') {
 				res.render('search', {
+					markup: ReactDOMServer.renderToString(SearchPage()),
 					title: 'Search Results',
 					query,
 					results: entities,
@@ -182,6 +183,7 @@ router.get('/search', (req, res) => {
 
 			if (mode === 'search') {
 				res.render('search', {
+					markup: ReactDOMServer.renderToString(SearchPage()),
 					title: 'Search Results',
 					error: message,
 					results: [],

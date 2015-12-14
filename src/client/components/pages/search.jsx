@@ -33,7 +33,7 @@ module.exports = React.createClass({
             <form className="whole-page-form form-horizontal">
               <div className="form-group">
                 <div className="input-group">
-                  <input onChange={handleChange} type="text" name="q" className="form-control"/>
+                  <input onChange={this.handleChange} type="text" name="q" className="form-control"/>
                   <div className="input-group-btn">
                     <button type="submit" className="btn btn-default btn-success"><span className="fa fa-search"></span>&nbsp;Search</button>
                   </div>
