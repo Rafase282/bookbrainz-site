@@ -21,6 +21,9 @@ const PageHeader = require('react-bootstrap').PageHeader;
 
 module.exports = React.createClass({
 	displayName: 'SearchPage',
+	handleChange: function(e){
+		console.log(e);
+	},
 	render() {
 		'use strict';
 
@@ -30,7 +33,7 @@ module.exports = React.createClass({
             <form className="whole-page-form form-horizontal">
               <div className="form-group">
                 <div className="input-group">
-                  <input type="text" name="q" className="form-control"/>
+                  <input onChange={handleChange} type="text" name="q" className="form-control"/>
                   <div className="input-group-btn">
                     <button type="submit" className="btn btn-default btn-success"><span className="fa fa-search"></span>&nbsp;Search</button>
                   </div>
